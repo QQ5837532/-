@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;500&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   user-select: none;
@@ -66,7 +66,7 @@ body {
   }
 }
 
-span{
+span {
   position: relative;
   display: block;
   color: rgba(0, 0, 0, 0);
@@ -78,14 +78,13 @@ span{
   text-transform: uppercase;
 }
 
-span:hover{
+span:hover {
   color: #fff;
   -webkit-text-stroke: 1px #000;
   transition: 0.3s;
 }
 
-
-span:before{
+span:before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -93,7 +92,7 @@ span:before{
   transition: 0.2s;
 }
 
-span:after{
+span:after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -101,14 +100,14 @@ span:after{
   transition: 0.2s;
 }
 
-span:hover:before{
+span:hover:before {
   color:#46339c;
   z-index: -1;
   -webkit-text-stroke: 1px #000;
   transform: translate(-5px, 5px);
 }
 
-span:hover:after{
+span:hover:after {
   color: #664085;
   z-index: -2;
   -webkit-text-stroke: 1px #000;
