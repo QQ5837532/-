@@ -1,6 +1,9 @@
-* {
-  outline: none;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  cursor: pointer;
 }
 
 :root {
@@ -9,7 +12,7 @@
   --border-color: rgba(113 119 144 / 25%);
   --theme-color: #f9fafb;
   --inactive-color: rgb(113 119 144 / 78%);
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Montserrat', sans-serif;
   --hover-menu-bg: rgba(12 15 25 / 30%);
   --content-title-color: #999ba5;
   --content-bg: rgb(146 151 179 / 13%);
@@ -61,6 +64,55 @@ body {
   body {
     padding: 0.8em;
   }
+}
+
+span{
+  position: relative;
+  display: block;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #fff;
+  font-size: 15vh;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 10vh;
+  text-transform: uppercase;
+}
+
+span:hover{
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  transition: 0.3s;
+}
+
+
+span:before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+span:after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+span:hover:before{
+  color:#46339c;
+  z-index: -1;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(-5px, 5px);
+}
+
+span:hover:after{
+  color: #664085;
+  z-index: -2;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(5px, -5px);
 }
 
 .dark-light {
