@@ -1,87 +1,88 @@
 * {
- outline: none;
- box-sizing: border-box;
+    outline: none;
+    box-sizing: border-box;
 }
 
 :root {
- --background: rgb(50,52,55);
- --theme-bg-color: rgba(16 18 27 / 40%);
- --border-color: rgba(113 119 144 / 25%);
- --theme-color: #f9fafb;
- --inactive-color: rgb(113 119 144 / 78%);
- --body-font: "Source Sans Pro", Helvetica, sans-serif;
- --hover-menu-bg: rgba(12 15 25 / 30%);
- --content-title-color: #999ba5;
- --content-bg: rgb(146 151 179 / 13%);
- --button-inactive: rgb(249 250 251 / 55%);
- --dropdown-bg: #21242d;
- --dropdown-hover: rgb(42 46 60);
- --popup-bg: rgb(22 25 37);
- --search-bg:  #14162b;
- --overlay-bg: rgba(36, 39, 59, 0.3);
- --scrollbar-bg: rgb(1 2 3 / 40%);
+  --background: rgb(50,52,55);
+  --theme-bg-color: rgba(16 18 27 / 40%);
+  --border-color: rgba(113 119 144 / 25%);
+  --theme-color: #f9fafb;
+  --inactive-color: rgb(113 119 144 / 78%);
+  --body-font: "Poppins", sans-serif;
+  --hover-menu-bg: rgba(12 15 25 / 30%);
+  --content-title-color: #999ba5;
+  --content-bg: rgb(146 151 179 / 13%);
+  --button-inactive: rgb(249 250 251 / 55%);
+  --dropdown-bg: #21242d;
+  --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
+  --search-bg: #14162b;
+  --overlay-bg: rgba(36, 39, 59, 0.3);
+  --scrollbar-bg: rgb(1 2 3 / 40%);
 }
 
 .light-mode {
- --background: rgb(255 255 255 / 31%);
- --theme-bg-color: rgb(255 255 255 / 31%);
- --theme-color: #3c3a3a;
- --inactive-color: #333333;
- --button-inactive: #3c3a3a;
- --search-bg: rgb(255 255 255 / 31%);
- --dropdown-bg: #f7f7f7;
- --overlay-bg: rgb(255 255 255 / 30%);
- --dropdown-hover: rgb(236 236 236);
- --border-color: rgb(255 255 255 / 35%);
- --popup-bg: rgb(255 255 255);
- --hover-menu-bg: rgba(255 255 255 / 35%);
- --scrollbar-bg: rgb(255 253 253 / 57%);
- --content-title-color: --theme-color;
+  --background: rgb(255 255 255 / 31%);
+  --theme-bg-color: rgb(255 255 255 / 31%);
+  --theme-color: #3c3a3a;
+  --inactive-color: #333333;
+  --button-inactive: #3c3a3a;
+  --search-bg: rgb(255 255 255 / 31%);
+  --dropdown-bg: #f7f7f7;
+  --overlay-bg: rgb(255 255 255 / 30%);
+  --dropdown-hover: rgb(236 236 236);
+  --border-color: rgb(255 255 255 / 35%);
+  --popup-bg: rgb(255 255 255);
+  --hover-menu-bg: rgba(255 255 255 / 35%);
+  --scrollbar-bg: rgb(255 253 253 / 57%);
+  --content-title-color: --theme-color;
 }
 
 html {
- box-sizing: border-box;
- -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
- font-family: var(--body-font);
- background-color: var(--background);
- background-size: cover;
- background-position: center;
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- padding: 2em;
- width: 100%;
- height: 100vh;
- @media screen and (max-width: 480px) {
-  padding: 0.8em;
- }
+    font-family: var(--body-font);
+    background-color: var(--background);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    width: 100%;
+    height: 100vh;
+}
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 0.8em;
+    }
 }
 
 .dark-light {
- position: fixed;
- bottom: 50px;
- right: 30px;
- background-color: var(--dropdown-bg);
- box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
- padding: 8px;
- border-radius: 50%;
- z-index: 3;
- cursor: pointer;
- svg {
-  width: 24px;
-  flex-shrink: 0;
-  fill: #ffce45;
-  stroke: #ffce45;
-  transition: 0.5s;
- }
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    background-color: var(--dropdown-bg);
+    box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+}
+  .dark-light svg {
+    width: 24px;
+    flex-shrink: 0;
+    fill: #ffce45;
+    stroke: #ffce45;
+    transition: 0.5s;
 }
 
-.light-mode {
-.dark-light svg {
- fill: transparent;
- stroke: var(--theme-color);
- }}
+.light-mode .dark-light svg {
+    fill: transparent;
+    stroke: var(--theme-color);
+  }
